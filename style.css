@@ -1,12 +1,64 @@
 :root {
-    --color-heading: #0B0D19;
-    --color-body: #677386;
-    --color-bg-button: #3D7BFA;
-    --color-text-button: #FFF;
+  --color-heading: #0b0d19;
+  --color-body: #677386;
+  --color-bg-button: #3d7bfa;
+  --color-text-button: #fff;
 
-    /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+  /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
+  --hide-overlay: 1;
 }
 
-
 /* Begynd her... */
+body {
+  margin: 0;
+}
+main {
+  display: grid;
+  margin: 5px;
+  grid-template-columns: 1fr 1fr;
+  gap: 5em;
+  max-height: 500px;
+
+  & > :first-child {
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-direction: column;
+    gap: 1.5em;
+    max-width: 475px;
+    justify-content: center;
+  }
+  & > :last-child {
+    display: flex;
+    gap: 2em;
+  }
+  p {
+    color: var(--color-body);
+  }
+  h1 {
+    color: var(--color-heading);
+    font-weight: 500;
+    font-size: 65px;
+  }
+}
+
+button {
+  border-radius: 35px;
+  background-color: var(--color-bg-button);
+  color: var(--color-text-button);
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.section2 > * {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: center;
+
+  & > img {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+  }
+}
